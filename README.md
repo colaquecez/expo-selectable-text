@@ -1,12 +1,11 @@
 
 # Expo Selectable Text
 
-A Text component that supports text selection on Android.
+ExpoSelectableText is a custom React Native component that provides text selection functionality.
 
-Currently, it only works on Android, as similar functionality can be achieved on iOS by using a TextInput with onSelectionChange and onTouchEnd.
+> ⚠️ Note: This component is currently supported only on Android.
 
-Creating an iOS implementation using Swift is part of my future plans.  
-
+For iOS, similar functionality can be achieved using a TextInput component combined with the `onSelectionChange` and `onTouchEnd` props. However, a dedicated iOS implementation written in Swift is part of the planned future development.
 
 # Installating the library
   

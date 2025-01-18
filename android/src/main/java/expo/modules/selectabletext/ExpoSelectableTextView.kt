@@ -1,6 +1,7 @@
 package expo.modules.selectabletext
 
 import android.content.Context
+import android.graphics.Color
 import android.graphics.Typeface
 import android.util.Log
 import android.view.MotionEvent
@@ -64,6 +65,17 @@ class ExpoSelectableTextView(context: Context, appContext: AppContext) : ExpoVie
     } catch (e: Exception) {
       Log.e("ExpoSelectableTextView", e.toString())
       textView.typeface = Typeface.DEFAULT
+    }
+  }
+
+  fun parseColor(color: String): Int {
+    try {
+      val parsedColor = Color.parseColor(color)
+
+      return parsedColor
+    } catch(e: IllegalArgumentException) {
+      Log.e("ExpoSelectableTextView", "Invalid color format: $color")
+      return Color.BLACK
     }
   }
 

@@ -1,5 +1,6 @@
 package expo.modules.selectabletext
 
+import android.graphics.Color
 import android.graphics.Typeface
 import android.util.Log
 import expo.modules.kotlin.modules.Module
@@ -24,6 +25,14 @@ class ExpoSelectableTextModule : Module() {
 
       Prop("fontFamily") {view: ExpoSelectableTextView, fontFamily: String ->
        view.setFontFamily(fontFamily)
+      }
+
+      Prop("selectionColor") {view: ExpoSelectableTextView, selectionColor: String ->
+        view.textView.highlightColor = view.parseColor(selectionColor)
+      }
+
+      Prop("color") {view: ExpoSelectableTextView, color: String ->
+        view.textView.setTextColor(view.parseColor(color))
       }
 
       Events("onSelectionEnd")
