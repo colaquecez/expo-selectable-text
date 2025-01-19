@@ -12,6 +12,7 @@ export type ExpoSelectableTextViewProps = {
   fontSize?: number;
   color?: string;
   selectionColor?: string;
+  lineHeight?: number;
   fontFamily?: string;
   style?: StyleProp<ViewStyle>;
 };
